@@ -1,4 +1,5 @@
 // subarray is continuous part of an array
+//time complexity->0(n^3)
 //  in subsequence there can part of an array in order but no continous
 
 /*logic->
