@@ -23,3 +23,4 @@ arr size = 10000 then ops ~= 10000+constant
  +> it gives a linear graph  thus this Tc is called O(n)(linear Time Complexity)
 
 */
+//Time complexity of the linear search is linear time comlexity 0(n) 
