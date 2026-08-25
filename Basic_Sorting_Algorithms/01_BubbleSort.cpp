@@ -14,6 +14,7 @@ pseudo code-> [5,4,1,3,2]
           swap(arr[j],arr[j+1])}
        }
      }
+Time Complexity -> O(n^2)
 
 */
 // CODE
@@ -31,13 +32,21 @@ void bubbleSort(int *arr, int n)
 {
     for (int i = 0; i < n - 1; i++)
     {
+        bool isSwap = false;// For better optimization as if array already sorted ->
+        //no swaps occur in 1st turn then skip and optimize tc
         for (int j = 0; j < n - i - 1; j++)
         {
             if (arr[j] > arr[j + 1])
             {
                 swap(arr[j], arr[j + 1]);
+                isSwap = true;
             }
         }
+        if (! isSwap)
+        {
+           return;
+        }
+        
     }
     printarr(arr, n);
 }
