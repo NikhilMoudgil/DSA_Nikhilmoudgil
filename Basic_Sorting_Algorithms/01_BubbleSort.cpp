@@ -6,7 +6,7 @@ In bubble sort we do n-1 turns
 1st turn-> [3,4,5,6,2,8]
 2nd turn -> [3,4,5,2,6,8]
 .....
-5th turn -> [2,3,4,5,6,8]]
+5th turn -> [2,3,4,5,6,8]
 pseudo code-> [5,4,1,3,2]
      for(int=0;i<n-1,i++){
      for(int j=0,j<n-i-1,j++){
