@@ -29,6 +29,17 @@ inner(top-> right -> bottom -> left ) .... till we reach center
 
      in next iteration our variable changed for our variables
      srow++ ,scol++ ,erow--, ecol--
+
+     edge case for odd matrix as [3][5]-> Middle value will be duplicated so we add 
+     if statement to bottom and left 
+     as 
+     if(srow ==erow){
+                break;
+             } // for bottum
+    f(scol ==ecol){
+                break;
+             }//for left
+    
 */
 #include <iostream>
 using namespace std;
@@ -51,11 +62,17 @@ void spiralMatrix(int arr[][3], int n, int m)
         // bottom
         for (int j = ecol - 1; j >= scol; j--)
         {
+             if(srow ==erow){
+                break;
+             }
             cout << arr[erow][j] << " ";
         }
         // left
         for (int i = erow - 1; i >= srow + 1; i--)
         {
+             if(scol ==ecol){
+                break;
+             }
             cout << arr[i][scol] << " ";
         }
         srow++;
