@@ -1,0 +1,15 @@
+# Executables
+*.exe
+*.out
+*.app
+
+# Object and compiled files
+*.o
+*.obj
+*.lib
+*.a
+
+# Build directories
+build/
+bin/
+out/
