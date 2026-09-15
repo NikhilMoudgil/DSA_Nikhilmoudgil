@@ -24,3 +24,4 @@ int main()
     return 0;
 }
 // Memory Leak
+//STL -> Standard Template Library -> Of container classes , algorithms and iterators
