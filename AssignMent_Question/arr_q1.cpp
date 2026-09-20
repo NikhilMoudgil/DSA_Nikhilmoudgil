@@ -25,7 +25,7 @@ bool dist_element(int *nums,int n){
 
 int main()
 {
-  int nums[]={1,2,3,4};
+  int nums[]={1,2,2,3,4};
   int n= sizeof(nums)/sizeof(int);
 
   cout<< dist_element(nums,n);
