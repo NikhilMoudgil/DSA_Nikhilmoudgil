@@ -32,14 +32,15 @@ int tilingProblem(int n){//2Xn
 //Base Case -> 
 if(n==0||n==1){
     return 1;
-}
-
+   } 
+    /*
     //vertical
     int ans1=  tilingProblem(n-1);
     //horizontal 
     int ans2=tilingProblem(n-2);
     //final answer
-    return ans1+ans2;
+    return ans1+ans2;*/
+    return tilingProblem(n-1)+tilingProblem(n-2);
 
 }
 
