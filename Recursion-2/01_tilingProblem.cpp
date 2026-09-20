@@ -46,7 +46,7 @@ if(n==0||n==1){
 
 int main()
 {
-    int n=10;
+    int n=4;
     cout<<tilingProblem(n)<<endl;   
     return 0;
 }
