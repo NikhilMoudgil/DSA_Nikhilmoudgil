@@ -25,38 +25,29 @@ b. right maximum-> initialized + infinity
 #include<iostream>
 #include<climits>
 using namespace std;
-int trapwater(int*heights, int n){
-    int leftMax[20000];//as per  the leetcode problem
-    int rightMax[20000];
-    //rightMax[n-1]=INT_MIN;because in cpp it will give  a +ve value instead of -infinity
-    //leftMax[0]=INT_MIN;
-    rightMax[n-1]= heights[n-1];
-    leftMax[0]= heights[0];
+int trap(vector<int>& height) {
+        int n= height.size();
+        int leftMax[20000];
+        int rightMax[20000];
 
-    for (int i = 1; i < n; i++)
-    {
-       leftMax[i]=max(leftMax[i-1],heights[i-1]);
-    }
-    for (int i = n-2; i>=0; i--)
-    {
-        rightMax[i]=max(rightMax[i+1],heights[i+1]);
-    }
-    int watertrapped=0;
-    for (int i = 1; i < n; i++)
-    {
-       int currwater = min(leftMax[i],rightMax[i])-heights[i];
-       if(currwater>0){
-        watertrapped+=currwater;
-       }
-    }
-    cout<<"Water Trapped= "<< watertrapped;
-    return watertrapped;
-}
+        rightMax[n-1]=height[n-1];
+        leftMax[0]=height[0];
 
+        for(int i=1;i<n;i++){
+            leftMax[i]=max(leftMax[i-1],height[i]);
+        }
+        for(int i=n-2;i>=0;i--){
+            rightMax[i]=max(rightMax[i+1],height[i]);
+        }
+        int waterTrapped=0;
+        for(int i=0;i<n;i++){
+            int currwater=min(leftMax[i],rightMax[i])-height[i];
+            waterTrapped+=currwater;
+        }return waterTrapped;
+    }
 int main()
 {
-    int heights[7] = {7,6,5,4,3,2,1};
-    int n = sizeof(heights) / sizeof(int);
-    trapwater(heights,n);
+    int height[7] = {7,6,5,4,3,2,1};
+    trap(height);
     return 0;
 }
